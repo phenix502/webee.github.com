@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-05-17T20:41:17Z</updated>
+    <updated>2012-05-17T23:12:54Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -29,6 +29,7 @@
                         label="Github" />
             
             <content type="html">
-                                            </content>
+                                &lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;历时两天，终于折腾出来了一个看起来可以用的博客了。还有很多需要改进的地方，慢慢来吧。&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;            </content>
         </entry>
     </feed>
