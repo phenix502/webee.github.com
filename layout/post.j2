@@ -39,11 +39,11 @@
     </div>
 
     <div id="post-content">
-    {% mark post %}
     {% filter markdown|typogrify -%}
-        {% block post -%}{%- endblock %}
+        {% mark post %}
+            {% block post -%}{%- endblock %}
+        {% endmark %}
     {%- endfilter %}
-    {% endmark %}
     <div id="post-comment">
         <a class="switch" href="" onclick="return false;">展开/关闭评论</a>
         <div class="disqus">

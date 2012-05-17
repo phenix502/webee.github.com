@@ -40,7 +40,7 @@
                 {{ article.image|markdown|typogrify }}
                 {{ article.excerpt|markdown|typogrify }}
                 {%- else %}
-                {{ article.post|markdown|typogrify }}
+                {{ article.post }}
                 {%- endif %}
                 {%- endfilter %}
             </content>
