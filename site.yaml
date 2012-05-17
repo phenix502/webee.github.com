@@ -38,6 +38,7 @@ context:
                 type: page
                 url: about.html
 meta:
+    name: BabYiShan
     nodemeta: meta.yaml
     author: webee.yw
     charset: utf-8
