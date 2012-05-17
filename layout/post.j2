@@ -40,9 +40,9 @@
 
     <div id="post-content">
     {% filter markdown|typogrify -%}
-        {% mark post %}
+        {% mark post -%}
             {% block post -%}{%- endblock %}
-        {% endmark %}
+        {%- endmark %}
     {%- endfilter %}
     <div id="post-comment">
         <a class="switch" href="" onclick="return false;">展开/关闭评论</a>
