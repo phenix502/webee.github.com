@@ -1,0 +1,9 @@
+extends: site.yaml
+mode: production
+base_url: /
+
+publisher:
+    github:
+        type: hyde.ext.publishers.dvcs.Git
+        path: ../webee.github.com
+        url: git@github.com:webee/webee.github.com.git

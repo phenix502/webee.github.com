@@ -1,0 +1,73 @@
+@w-body: 650px;
+@font-fancy: "微软雅黑","Times New Roman", Times, serif;
+
+body {
+    font-family: "微软雅黑","Times New Roman", Times, serif;
+    font-size:10pt;
+    text-rendering: optimizeLegibility;
+    background: url(/media/images/bg_flower_light.jpg) repeat fixed;
+    filter:alpha(opacity=0);
+    -moz-opacity:0.00;
+    opacity:1.00;
+}
+
+#post-nav {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+#post-title {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+#post-content {
+    ul.print-links {
+        display: block;
+        font-size: 1em;
+        list-style-type: none;
+        margin-left: 0em;
+
+        a {
+            text-decoration: none;
+        }
+    }
+    code, pre {
+        font: normal 9pt Menlo, Monaco, Consolas, "Courier New", Courier, monospace;
+    }
+    img {
+        display: block;
+        margin:10px auto;
+        max-width:@w-body;
+    }
+    img.left, img.right {
+        border: none;
+        background: none;
+        padding: none;
+    }
+    img.left {
+         margin: 0 1.5em 1em 0;
+         float: left;
+    }
+    img.right {
+        margin: 0 0 .75em 1em;
+        float: right;
+    }
+}
+div#post-content.with-diagrams img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: none;
+}
+span.amp {
+    font-family: "Palatino", "Constantia", "Palatino Linotype", serif;
+    font-style: italic;
+}
+a {
+    text-decoration: underline;
+    color: #c06;
+}

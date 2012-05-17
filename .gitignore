@@ -1,0 +1,10 @@
+*.swp
+*~
+*.pyc
+.hyde_deps
+deploy/
+deploy/*
+*.tar.gz
+.depend
+*.o
+*.bin

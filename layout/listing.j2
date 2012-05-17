@@ -1,0 +1,33 @@
+{% extends "base.j2" %}
+{% block main -%}
+<div class="section-listing">
+    <ol class="group">
+    {% for res in resource.page.posts %}
+    <li>
+        <a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a>
+        <span class="snip">{{ res.meta.description }}</span>
+        <div>
+            <span class="date right">
+                {{res.meta.author}}:{{ res.meta.created.strftime('%Y-%m-%d %H:%M:%S') }}
+            </span>
+        </div>
+    </li>
+        {% if loop.last and loop.index is odd %}
+            <li></li>
+        {% endif %}
+    {% endfor %}
+    <div class="more">
+        <li>
+            {% if resource.page.next %}
+            <a href="{{content_url(resource.page.next.resource.url)}}">&laquo;&laquo;更旧</a>
+            {% endif %}
+        </li>
+        <li>
+            {% if resource.page.previous %}
+            <a href="{{content_url(resource.page.previous.resource.url)}}">更新&raquo;&raquo;</a>
+            {% endif %}
+        </li>
+    </div>
+    </ol>
+</div>
+{%- endblock %}

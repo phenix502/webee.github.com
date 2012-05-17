@@ -1,0 +1,59 @@
+{% extends "base.j2" %}
+
+{% block main -%}
+<article class="post">
+    <div id="post-nav">
+        {% if resource.next_by_time %}&laquo;
+        <a class="next" title="{{ resource.next_by_time.meta.title }}"
+            href="{{ content_url(resource.next_by_time.url) }}">
+           {{resource.next_by_time.meta.title}}
+        </a>-
+        {% endif %}
+        {% if resource.prev_by_time %}-
+        <a class="prev" title="{{ resource.prev_by_time.meta.title }}"
+            href="{{ content_url(resource.prev_by_time.url) }}">
+           {{resource.prev_by_time.meta.title}}
+        </a>&raquo;
+        {% endif %}
+    </div>
+    <div id="post-title">
+        <h1><a href="{{ content_url(resource.url) }}">{{ resource.meta.title }}</a></h1>
+    </div>
+    <div id="post-stats" class="group">
+        <p>
+        <a href="">{{resource.meta.author}}</a>
+        <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
+        posted@{{ resource.meta.created.strftime('%Y-%m-%d %H:%M:%S') }}
+        </time>
+
+        {% if resource.meta.tags %}
+        Tags:
+            {% for tag in resource.meta.tags %}
+            <a class="small" href="{{ content_url('blog/tags/'~tag~'.html') }}">
+                {{ tag }}
+            </a>
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        {% endif %}
+        </p>
+    </div>
+
+    <div id="post-content">
+    {% filter markdown|typogrify -%}
+        {% block post -%}{%- endblock %}
+    {%- endfilter %}
+    <div id="post-comment">
+        <a class="switch" href="" onclick="return false;">展开/关闭评论</a>
+        <div class="disqus">
+        {% include "disqus.j2" %}
+        </div>
+    </div>
+</article>
+{%- endblock %}
+{% block scripts %}
+{% endblock scripts %}
+{% block on_ready %}
+    $('a.switch').on('click',function(){
+        $(this).next().slideToggle(100);
+    });
+{% endblock %}

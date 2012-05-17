@@ -1,0 +1,82 @@
+{% extends "root.j2" %}
+{% block all %}
+<!doctype html>
+<html>
+<head>
+    {% block starthead %}{% endblock starthead %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="{{ resource.meta.compatibility }}">
+    <title>{% block title %}{{ resource.meta.title }}/{{ resource.meta.author }}{% endblock %}</title>
+    <meta name="generator" content="Hyde" />
+    <meta name="description" content="{{ resource.meta.description }}">
+    <meta name="author" content="{{ resource.meta.author }}">
+    <meta name="viewport" content="{{ resource.meta.viewport }}">
+
+    {% block favicons %}
+    <link rel="shortcut icon" href="{{ media_url('/favicon.ico') }}">
+    {% endblock favicons %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{{ media_url('css/basic.css') }}">
+        <link rel="stylesheet" href="{{ media_url('css/site.css') }}">
+        <link rel="stylesheet" href="{{ media_url('css/print.css') }}">
+        {% block extra_css %}{% endblock %}
+    {% endblock css %}
+
+    {% block headjs %}{% endblock headjs %}
+    {% block endhead %}{% endblock endhead %}
+</head>
+<body>
+<div class="wrap">
+    <div class="top group">
+        <header>
+            <a href="/">BabYiShan</a>
+        </header>
+
+        <nav>
+            <a href="/blog/" title="">Blog</a>
+            <a href="/project/" title="">Project</a>
+            <a href="/note/" title="">note</a>
+            <a href="/about.html" title="">About</a>
+            <a href="/blog/atom.xml" title="Blog feed" target="_blank">Rss</a>
+        </nav>
+    </div>
+    <div><hr/></div>
+    <div class="content">
+        {% block main %}
+        {% endblock main %}
+    </div>
+    <div class="hrb"><hr/></div>
+    <footer>
+        <p>
+        我的
+        <a href="http://github.com/webee/" target="_blank">GitHub</a>,
+        <a href="http://twitter.com/webeex/" target="_blank">Twitter</a>
+        </p>
+        <p class="copyright right">
+            Designed by webee &copy; Copyright 2012, Powered by <a href="http://hyde.github.com" target="_blank">hyde</a>.
+        </p>
+    </footer>
+</div>
+{% block js %}
+    {% block jquery %}
+    <script src="{{ media_url('js/libs/jquery-1.7.1.min.js') }}"></script>
+    {% endblock jquery %}
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+    {% block analytics %}
+    {% include "analytics.j2" %}
+    {% endblock analytics %}
+
+<script>
+$(document).ready(function(){
+    {% block on_ready %}
+    {% endblock %}
+});
+</script>
+{% endblock js %}
+</body>
+</html>
+{% endblock all%}
