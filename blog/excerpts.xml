@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>
+        excerpts feed    </title>
+        <link href="blog/excerpts.xml" rel="self" />
+    
+        <link href="/"/>
+    
+        
+    <updated>2012-05-17T20:41:17Z</updated>
+
+    <id>/blog/excerpts.xml/</id>
+
+            <entry>
+            <title type="html">第一篇</title>
+            <author><name>webee.yw</name></author>
+            <link href="/blog/2012/05/blog_init.html"/>
+            <updated>2012-05-17T18:22:00Z</updated>
+            <published>2012-05-17T18:22:00Z</published>
+            <id>/blog/2012/05/blog_init.html</id>
+                        <category   scheme="/blog/tags"
+                        term="blog"
+                        label="Blog" />
+                        <category   scheme="/blog/tags"
+                        term="hyde"
+                        label="Hyde" />
+                        <category   scheme="/blog/tags"
+                        term="github"
+                        label="Github" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+    </feed>
