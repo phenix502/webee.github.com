@@ -4,17 +4,17 @@
         BabYiShan.com    </title>
         <link href="blog/atom.xml" rel="self" />
     
-        <link href="http://babyishan.com"/>
+        <link href="/"/>
     
         
-    <updated>2012-05-18T09:47:38Z</updated>
+    <updated>2012-05-18T09:50:50Z</updated>
 
     <id>/blog/atom.xml/</id>
 
             <entry>
             <title type="html">第一篇</title>
             <author><name>webee.yw</name></author>
-            <link href="/blog/2012/05/blog_init.html"/>
+            <link href="http://babyishan.com/blog/2012/05/blog_init.html"/>
             <updated>2012-05-17T18:22:00Z</updated>
             <published>2012-05-17T18:22:00Z</published>
             <id>/blog/2012/05/blog_init.html</id>
