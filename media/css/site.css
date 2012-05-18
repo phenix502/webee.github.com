@@ -76,45 +76,6 @@ body pre {
   font-family: Consolas, Menlo, "Courier New", monospace;
   font-size: 14px;
 }
-body .codehilite code,
-body .codehilite pre {
-  font-family: Consolas, Menlo, "Courier New", monospace;
-  font-size: 16px;
-  line-height: 25px;
-  overflow-x: auto;
-  border: 1px solid #d5d5d5;
-  border-left: 10px solid #d5d5d5;
-  background-color: #fafafa;
-  padding: 11px 15px 12px;
-  margin-left: -25px;
-}
-body .codehilite pre::-webkit-scrollbar {
-  height: 25px;
-}
-body .codehilite pre::-webkit-scrollbar-button:start,
-body .codehilite pre::-webkit-scrollbar-button:end {
-  display: none;
-}
-body .codehilite pre::-webkit-scrollbar-track-piece {
-  background-color: #eee;
-}
-body .codehilite pre::-webkit-scrollbar-thumb {
-  background-color: #bbb;
-  border: 7px solid #eee;
-  -webkit-background-clip: padding-box;
-  -webkit-border-radius: 12px;
-}
-body p code,
-body li code {
-  background: none repeat scroll 0 0 #EEEEEE;
-  border: 1px solid #cccccc;
-  font-family: "Courier";
-  font-size: 14px;
-  line-height: 14px;
-  padding: 0px 5px;
-  margin: 0;
-  white-space: nowrap;
-}
 body .wrap {
   width: 650px;
   margin: 0 auto;
@@ -166,14 +127,13 @@ body .wrap footer {
   text-align: center;
 }
 body .wrap footer p {
-  font-size: 14px;
+  font-size: 12px;
   font-style: italic;
   line-height: 25px;
   margin-bottom: 0px;
 }
-body .wrap footer .rochester-made img {
-  opacity: 0.7;
-  padding: 5px 20px;
+body .wrap footer .copyright {
+  font-size: 10px;
 }
 hr {
   border: none;
@@ -316,12 +276,12 @@ span.dquo {
   background: none;
   border: none;
 }
-#post-comment a.switch {
+#post-comment a.comment_switch {
   font-size: 14px;
   text-decoration: none;
   color: #222222;
 }
-#post-comment a.switch:hover {
+#post-comment a.comment_switch:hover {
   color: #e50053;
   text-decoration: underline;
 }
@@ -336,24 +296,4 @@ img.self {
   margin-top: -15px;
   margin-left: 30px;
   margin-bottom: 20px;
-}
-div#cboxCurrent {
-  bottom: -30px;
-  font-size: 17px;
-  font-weight: normal;
-  left: 60px;
-}
-div.screenshots img {
-  max-width: 580px;
-}
-#scrolling-header {
-  color: #999;
-  font-size: 23px;
-  font-style: italic;
-  font: italic 23px "微软雅黑", "Times New Roman", Times, serif;
-  line-height: 30px;
-  position: fixed;
-  top: 75px;
-  text-align: right;
-  width: 180px;
 }

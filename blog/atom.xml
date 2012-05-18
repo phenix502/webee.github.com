@@ -7,17 +7,17 @@
         <link href="/"/>
     
         
-    <updated>2012-05-18T09:50:50Z</updated>
+    <updated>2012-05-19T04:47:35Z</updated>
 
     <id>/blog/atom.xml/</id>
 
             <entry>
             <title type="html">第一篇</title>
             <author><name>webee.yw</name></author>
-            <link href="http://babyishan.com/blog/2012/05/blog_init.html"/>
+            <link href="http://babyishan.com/blog/2012/05/blog_init"/>
             <updated>2012-05-17T18:22:00Z</updated>
             <published>2012-05-17T18:22:00Z</published>
-            <id>/blog/2012/05/blog_init.html</id>
+            <id>/blog/2012/05/blog_init</id>
                         <category   scheme="/blog/tags"
                         term="blog"
                         label="Blog" />
@@ -29,9 +29,6 @@
                         label="Github" />
             
             <content type="html">
-                                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;历时两天，终于折腾出来了一个看起来可以用的博客了。还有很多需要改进的地方，慢慢来吧。
-
-
-            </content>
+                                            </content>
         </entry>
     </feed>
