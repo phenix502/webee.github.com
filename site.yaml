@@ -39,6 +39,7 @@ context:
                 url: about.html
 meta:
     name: BabYiShan
+    host: http://babyishan.com
     nodemeta: meta.yaml
     author: webee.yw
     charset: utf-8
