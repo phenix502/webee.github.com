@@ -43,49 +43,6 @@ body {
         font-family: Consolas, Menlo, "Courier New", monospace;
         font-size: 14px;
     }
-    .codehilite {
-        code, pre {
-            font-family: Consolas, Menlo, "Courier New", monospace;
-            font-size: 16px;
-            line-height: 25px;
-
-            overflow-x: auto;
-
-            border: 1px solid #d5d5d5;
-            border-left: 10px solid #d5d5d5;
-            background-color: #fafafa;
-
-            padding: 11px 15px 12px;
-            margin-left: -25px;
-        }
-        pre::-webkit-scrollbar {
-            height: 25px;
-        }
-        pre::-webkit-scrollbar-button:start,
-        pre::-webkit-scrollbar-button:end {
-            display: none;
-        }
-        pre::-webkit-scrollbar-track-piece  {
-            background-color: #eee;
-        }
-        pre::-webkit-scrollbar-thumb {
-            background-color: #bbb;
-            border: 7px solid #eee;
-            -webkit-background-clip: padding-box;
-            -webkit-border-radius: 12px;
-        }
-    }
-    p code, li code {
-        background: none repeat scroll 0 0 #EEEEEE;
-        border: 1px solid #cccccc;
-        font-family:"Courier";
-        font-size: 14px;
-        line-height: 14px;
-        padding: 0px 5px;
-        margin: 0;
-        white-space: nowrap;
-    }
-
     .wrap {
         width: @w-body;
         margin: 0 auto;
@@ -141,17 +98,14 @@ body {
             text-align: center;
 
             p {
-                font-size: 14px;
+                font-size: 12px;
                 font-style: italic;
                 line-height: 25px;
                 margin-bottom: 0px;
             }
-            .rochester-made {
-                img {
-                    opacity: 0.7;
-                    padding: 5px 20px;
+                .copyright {
+                    font-size: 10px;
                 }
-            }
         }
     }
 }
@@ -322,7 +276,7 @@ span.dquo {
 }
 
 #post-comment {
-    a.switch {
+    a.comment_switch {
         font-size:14px;
         text-decoration: none;
         color: @c-body;
@@ -344,28 +298,4 @@ img.self {
     margin-top: -15px;
     margin-left: 30px;
     margin-bottom: 20px;
-}
-
-div#cboxCurrent {
-    bottom: -30px;
-    font-size: 17px;
-    font-weight: normal;
-    left: 60px;
-}
-div.screenshots {
-    img {
-        max-width: 580px;
-    }
-}
-
-#scrolling-header {
-    color: #999;
-    font-size: 23px;
-    font-style: italic;
-    font: italic 23px @font-fancy;
-    line-height: 30px;
-    position: fixed;
-    top: 75px;
-    text-align: right;
-    width: 180px;
 }

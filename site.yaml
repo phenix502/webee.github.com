@@ -20,6 +20,8 @@ context:
     data:
         version: 0.1
         tweet_via: webee.yw
+        script:
+            jquery: http://code.jquery.com/jquery.min.js
         menu:
             - 
                 name: Home
@@ -39,14 +41,15 @@ context:
                 url: about.html
 meta:
     name: BabYiShan
+    title: babyishan.com
     host: http://babyishan.com
     nodemeta: meta.yaml
     author: webee.yw
     charset: utf-8
-    usedisqus: true
     disqus: babyishan
+    gplus: 118009003255308383754
+    feed: http://feed.feedsky.com/babyishan
     ga_code: UA-31832517-1
-    title: babyishan.com
     created: !!timestamp 2012-05-15 17:00:00
 sorter:
     time:

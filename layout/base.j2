@@ -6,7 +6,7 @@
     {% block starthead %}{% endblock starthead %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="{{ resource.meta.compatibility }}">
-    <title>{% block title %}{{ resource.meta.title }}/{{ resource.meta.author }}{% endblock %}</title>
+    <title>{% block title %}{{site.meta.name}}:{{resource.meta.title}}{% endblock %}</title>
     <meta name="generator" content="Hyde" />
     <meta name="description" content="{{ resource.meta.description }}">
     <meta name="author" content="{{ resource.meta.author }}">
@@ -30,7 +30,7 @@
 <div class="wrap">
     <div class="top group">
         <header>
-            <a href="/">BabYiShan</a>
+        <a href="/">{{site.meta.name}}</a>
         </header>
 
         <nav>
@@ -38,7 +38,7 @@
             <a href="/project/" title="">Project</a>
             <a href="/note/" title="">note</a>
             <a href="/about.html" title="">About</a>
-            <a href="http://feed.feedsky.com/babyishan" title="Blog feed" target="_blank">Feed</a>
+            <a href="{{site.meta.feed}}" title="Blog feed" target="_blank">Feed</a>
         </nav>
     </div>
     <div><hr/></div>
@@ -51,7 +51,8 @@
         <p>
         我的
         <a href="http://github.com/webee/" target="_blank">GitHub</a>,
-        <a href="http://twitter.com/webeex/" target="_blank">Twitter</a>
+        <a href="http://twitter.com/webeex/" target="_blank">Twitter</a>,
+        <a href="https://plus.google.com/u/0/{{ site.meta.gplus }}" target="_blank">Google+</a>
         </p>
         <p class="copyright right">
             Designed by webee &copy; Copyright 2012, Powered by <a href="http://hyde.github.com" target="_blank">hyde</a>.
@@ -60,7 +61,7 @@
 </div>
 {% block js %}
     {% block jquery %}
-    <script src="{{ media_url('js/libs/jquery-1.7.1.min.js') }}"></script>
+    <script src="{{ script.jquery }}"></script>
     {% endblock jquery %}
 
     {% block scripts %}

@@ -1,7 +1,6 @@
-{% extends "base.j2" %}
+{% extends "page.j2" %}
 
-{% block main -%}
-<article class="post">
+{% block post_nav %}
     <div id="post-nav">
         {% if resource.next_by_time %}&laquo;
         <a class="next" title="{{ resource.next_by_time.meta.title }}"
@@ -16,14 +15,19 @@
         </a>&raquo;
         {% endif %}
     </div>
+{% endblock %}
+
+{% block post_title %}
     <div id="post-title">
         <h1><a href="{{ content_url(resource.url) }}">{{ resource.meta.title }}</a></h1>
     </div>
+{% endblock %}
+
+{% block post_stats %}
     <div id="post-stats" class="group">
         <p>
-        <a href="">{{resource.meta.author}}</a>
         <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
-        posted@{{ resource.meta.created.strftime('%Y-%m-%d %H:%M:%S') }}
+        posted by {{resource.meta.author}}@{{ resource.meta.created.strftime('%Y-%m-%d %H:%M:%S') }}
         </time>
 
         {% if resource.meta.tags %}
@@ -37,25 +41,4 @@
         {% endif %}
         </p>
     </div>
-
-    <div id="post-content">
-    {% filter markdown|typogrify -%}
-        {% mark post -%}
-            {% block post -%}{%- endblock %}
-        {%- endmark %}
-    {%- endfilter %}
-    <div id="post-comment">
-        <a class="switch" href="" onclick="return false;">展开/关闭评论</a>
-        <div class="disqus">
-        {% include "disqus.j2" %}
-        </div>
-    </div>
-</article>
-{%- endblock %}
-{% block scripts %}
-{% endblock scripts %}
-{% block on_ready %}
-    $('a.switch').on('click',function(){
-        $(this).next().slideToggle(100);
-    });
 {% endblock %}

@@ -2,26 +2,47 @@
 
 {% block main -%}
 <article class="post">
-    <div id="post-content">
-    {% filter markdown|typogrify -%}
-        {% block post -%}{%- endblock %}
-    {%- endfilter %}
-    {% if resource.meta.comment %}
-    <div id="post-comment">
-        <a class="switch" href="" onclick="return false;">展开/关闭评论</a>
-        <div class="disqus">
-        {% include "disqus.j2" %}
-        </div>
-    </div>
-    {% endif %}
+    {% block post_head %}
+        {% block post_nav %}
+        {% endblock %}
+
+        {% block post_title %}
+        {% endblock %}
+
+        {% block post_stats %}
+        {% endblock %}
+    {% endblock %}
+    {% block post_body %}
+        {% block post_content %}
+            <div id="post-content">
+            {% filter markdown|typogrify -%}
+                {% block post -%}{%- endblock %}
+            {%- endfilter %}
+            </div>
+        {% endblock %}
+    {% endblock %}
+    {% block post_foot %}
+        {% block post_comment %}
+            {% if not resource.meta.disable_comment %}
+            <div id="post-comment">
+                <a class="comment_switch" href="" onclick="return false;">展开/关闭评论</a>
+                <div class="disqus">
+                {% include "disqus.j2" %}
+                </div>
+            </div>
+            {% endif %}
+        {% endblock %}
+    {% endblock %}
 </article>
 {%- endblock %}
+
 {% block scripts %}
 {% endblock scripts %}
-{% if resource.meta.comment %}
+
 {% block on_ready %}
-    $('a.switch').on('click',function(){
+    {% if not resource.meta.disable_comment %}
+    $('a.comment_switch').on('click',function(){
         $(this).next().slideToggle(100);
     });
+    {% endif %}
 {% endblock %}
-{% endif %}
