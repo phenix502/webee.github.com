@@ -8,3 +8,4 @@ deploy/*
 .depend
 *.o
 *.bin
+content/blog/tags/*

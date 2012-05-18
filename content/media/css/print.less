@@ -34,9 +34,6 @@ body {
             text-decoration: none;
         }
     }
-    code, pre {
-        font: normal 9pt Menlo, Monaco, Consolas, "Courier New", Courier, monospace;
-    }
     img {
         display: block;
         margin:10px auto;
@@ -54,6 +51,36 @@ body {
     img.right {
         margin: 0 0 .75em 1em;
         float: right;
+    }
+    .codebox {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .code {
+        position: relative;
+        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        background-color: #F0F3F3;
+    }
+    .code figcaption {
+        font-size: 10px;
+        position: absolute;
+        bottom: 3px;
+        right: 12px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .highlight {
+        width:100%;
+        height: auto;
+        overflow: auto;
+    }
+    .highlight pre {
+        font: normal 13px Menlo, Monaco, Consolas, "Courier New", Courier, monospace;
+        padding: 16px 12px 12px;
+        line-height: 20px;
+        margin-bottom: 4px;
     }
 }
 div#post-content.with-diagrams img {
