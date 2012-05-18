@@ -8,6 +8,7 @@ plugins:
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
     - hyde.ext.plugins.less.LessCSSPlugin
     - hyde.ext.plugins.blockdown.BlockdownPlugin
+    - hyde.ext.plugins.urls.UrlCleanerPlugin
     - hyde.ext.plugins.sorter.SorterPlugin
     - hyde.ext.plugins.grouper.GrouperPlugin
     - hyde.ext.plugins.markings.MarkingsPlugin
@@ -73,10 +74,17 @@ less:
     app: /usr/bin/lessc
 paginator:
     sorter: time
-    size: 2
+    size: 6
     file_pattern: pages/$PAGE/$FILE$EXT
-markdonw:
+markdown:
     extensions:
         - def_list
         - tables
         - headerid
+urlcleaner:
+    index_file_names:
+        - index.html
+    strip_extensions:
+        - html
+    append_slash: false
+
