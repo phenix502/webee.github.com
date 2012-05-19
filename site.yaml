@@ -44,6 +44,7 @@ meta:
     name: BabYiShan
     title: babyishan.com
     host: http://babyishan.com
+    github_repo: http://github.com/webee/webee.github.com
     nodemeta: meta.yaml
     author: webee.yw
     charset: utf-8
