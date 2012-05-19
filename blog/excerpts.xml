@@ -7,10 +7,34 @@
         <link href="/"/>
     
         
-    <updated>2012-05-19T14:07:48Z</updated>
+    <updated>2012-05-19T18:29:23Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">使用hyde+github pages搭建静态站点</title>
+            <author><name>webee.yw</name></author>
+            <link href="http://babyishan.com/blog/2012/05/github_pages_with_hyde"/>
+            <updated>2012-05-19T17:30:00Z</updated>
+            <published>2012-05-19T17:30:00Z</published>
+            <id>/blog/2012/05/github_pages_with_hyde</id>
+                        <category   scheme="/blog/tags"
+                        term="blog"
+                        label="Blog" />
+                        <category   scheme="/blog/tags"
+                        term="hyde"
+                        label="Hyde" />
+                        <category   scheme="/blog/tags"
+                        term="jekyll"
+                        label="Jekyll" />
+                        <category   scheme="/blog/tags"
+                        term="github"
+                        label="Github" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">第一篇</title>
             <author><name>webee.yw</name></author>
