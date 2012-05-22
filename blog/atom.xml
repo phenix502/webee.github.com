@@ -7,10 +7,36 @@
         <link href="/"/>
     
         
-    <updated>2012-05-22T21:06:42Z</updated>
+    <updated>2012-05-23T00:15:12Z</updated>
 
     <id>/blog/atom.xml/</id>
 
+            <entry>
+            <title type="html">初接触网站开发之理解与心得</title>
+            <author><name>webee.yw</name></author>
+            <link href="http://babyishan.com/blog/2012/05/thinking_of_web_dev"/>
+            <updated>2012-05-22T20:30:00Z</updated>
+            <published>2012-05-22T20:30:00Z</published>
+            <id>/blog/2012/05/thinking_of_web_dev</id>
+                        <category   scheme="/blog/tags"
+                        term="note"
+                        label="Note" />
+                        <category   scheme="/blog/tags"
+                        term="web"
+                        label="Web" />
+                        <category   scheme="/blog/tags"
+                        term="think"
+                        label="Think" />
+                        <category   scheme="/blog/tags"
+                        term="django"
+                        label="Django" />
+                        <category   scheme="/blog/tags"
+                        term="experience"
+                        label="Experience" />
+            
+            <content type="html">
+                                            </content>
+        </entry>
             <entry>
             <title type="html">使用hyde+github pages搭建静态站点</title>
             <author><name>webee.yw</name></author>
