@@ -1,9 +1,9 @@
 ---
-extends: page.j2
-default_block: post
-title: My notes.
-description: some notes.
-disable_comment: true
+title: Note
+extends: listing.j2
+paginator:
+    sorter: time
+    size: 6
+    file_pattern: pages/$PAGE/$FILE$EXT
+listable: false
 ---
-
-## 放置心得笔记

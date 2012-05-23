@@ -2,13 +2,13 @@
 
 {% block post_nav %}
     <div id="post-nav">
-        {% if resource.next_by_time %}&laquo;
+        {% if resource.next_by_time and resource.next_by_time.node == resource.node %}&laquo;
         <a class="next" title="{{ resource.next_by_time.meta.title }}"
             href="{{ content_url(resource.next_by_time.url) }}">
            {{resource.next_by_time.meta.title}}
         </a>-
         {% endif %}
-        {% if resource.prev_by_time %}-
+        {% if resource.prev_by_time and resource.prev_by_time.node == resource.node %}-
         <a class="prev" title="{{ resource.prev_by_time.meta.title }}"
             href="{{ content_url(resource.prev_by_time.url) }}">
            {{resource.prev_by_time.meta.title}}
