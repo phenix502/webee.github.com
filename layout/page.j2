@@ -18,9 +18,11 @@
     {% block post_body %}
         {% block post_content %}
             <div id="post-content">
+            {% mark post %}
             {% filter markdown|typogrify -%}
                 {% block post -%}{%- endblock %}
             {%- endfilter %}
+            {% endmark %}
             </div>
         {% endblock %}
     {% endblock %}
