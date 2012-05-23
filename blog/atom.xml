@@ -7,7 +7,7 @@
         <link href="/"/>
     
         
-    <updated>2012-05-23T00:15:12Z</updated>
+    <updated>2012-05-23T09:13:05Z</updated>
 
     <id>/blog/atom.xml/</id>
 
@@ -35,7 +35,117 @@
                         label="Experience" />
             
             <content type="html">
-                                            </content>
+                                            &lt;p&gt;四月初到五月初，在我作为网管的学校测试中心，由于老的预约系统（aps+access）实在难于维护，也不能很好的适应新的需要，因此我决定重新开发一个新的网站。由于之前了解过django和mvc，所以我就选择了django和mysql的组合。之前没有怎么接触过网站开发，这是我的第一个网站项目，所以这一个多月是在一边学习，一边开发。这其中对网站开发也产生自己的理解和一些可能有用的心得，大多数心得都是针对个人独自开发来说的，有些也适用于其它开发活动。&lt;/p&gt;
+&lt;h2 id=&#34;&#34;&gt;准备工作&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;确定开发工具&lt;/li&gt;
+&lt;li&gt;搭建开发环境&lt;/li&gt;
+&lt;li&gt;学习&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由于原先的站点是由asp+access开发的，所以我最开始也是考虑这样开发的，但是asp+access不说已经很过时了，我也被它的代码吓到了：表现和逻辑在一起，很难到可维护，可复用，更难以扩展。最后我选择了django+mysql，主要是之前对对它们有所了解，很喜欢mvc（django里是叫mtv+urlConf）。&lt;/p&gt;
+&lt;p&gt;确定了django+mysql后就要开始搭建开发环境了，主要是操作系统，&lt;span class=&#34;caps&#34;&gt;IDE&lt;/span&gt;等。最开始我是想在windows下找一个开发django好的&lt;span class=&#34;caps&#34;&gt;IDE&lt;/span&gt;环境，找到了Aptana，但是使用起来很麻烦。最后还是感觉django的开发，最好的方式是在linux下用vim等文本编辑器来做。&lt;/p&gt;
+&lt;p&gt;如果已经熟悉所有的开发工具，就可以开始开发了。我因为对django不怎么熟悉，所以需要学习。我觉得这里学习最好的方式是跟着一些简单的实例教程做一遍，大致了解，然后找到官方的文档作参考就可以开始开发了。开发过程中官方文档不理解的，或者没具体讲解的地方，再google解决。&lt;/p&gt;
+&lt;h2 id=&#34;_1&#34;&gt;开发流程&lt;/h2&gt;
+&lt;p&gt;我最开始的开发流程是如下的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;需求分析+数据库设计&lt;/li&gt;
+&lt;li&gt;功能页面设计&lt;/li&gt;
+&lt;li&gt;实现&lt;ol&gt;
+&lt;li&gt;前台界面设计&lt;/li&gt;
+&lt;li&gt;后台功能实现&lt;/li&gt;
+&lt;li&gt;单元测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需求分析在我看来就是分析整个系统涉及到功能，再提取出需要的数据对象，然后再设计相应的数据库（django中的model设计）。&lt;strong&gt;数据表一定要考虑全面，把能够想到的字段最好都加上，因为删除一个字段容易，但是增加一个字段有时候很麻烦&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;不管什么网站都是由一个个页面组成的，所以接下来就是&lt;strong&gt;以页面为目标的功能分析&lt;/strong&gt;，比如登录，显示所有仪器，增加预约等。&lt;strong&gt;把能想到的所有页面按一定的规则分类，做一个列表&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;最后就是实现具体的页面功能，比如登录。这里前台和后台的关系比较纠结，我最开始是先实现后台功能再来进行前台界面设计。事实上这里逻辑是有问题的，因为界面是我们最终的目标，所以应该是由&lt;strong&gt;前台界面决定后台功能设计&lt;/strong&gt;。所以，这里我觉得界面是最重要的，界面指导了功能的设计，当然界面最终是反应功能的，好纠结。&lt;/p&gt;
+&lt;p&gt;如果是一个人开发，&lt;strong&gt;功能开发阶段的界面设计适可而止&lt;/strong&gt;，不影响实现功能就行了，等整个项目结束之后再对界面进行优化，不然会很影响效率。&lt;/p&gt;
+&lt;p&gt;如果是两人开发，一个负责后台，一个负责前台，在两人都了解了页面功能的基础上，约定好调用数据后，界面设计师和后台开发人员就可以独立开发了，最后由后台开发人员进行整合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先实现功能，再考虑优化&lt;/strong&gt;，很多时候在实现到一半的时候，会想到其它的更好的解决办法，但是我觉得最好还是不要停下来，把想法记下来就可以了，在下一轮改进的时候再实现新想法。不要纠结在优化的陷阱中，不然真的很影响效率。&lt;/p&gt;
+&lt;p&gt;以前面对一个功能的开发，可以做到很投入，专注的完成，效率很高。但是当一个人开发整个项目时，因为要想所有方面的事情，总是会考虑太多问题，而使自己犹豫不前，所以最好是提前制定好开发计划和相关的开发原则，严格执行。&lt;/p&gt;
+&lt;p&gt;总结一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;制定计划&lt;/li&gt;
+&lt;li&gt;实现功能，不考虑优化&lt;/li&gt;
+&lt;li&gt;记录任何有用的想法&lt;/li&gt;
+&lt;li&gt;严格执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;_2&#34;&gt;技能需要&lt;/h2&gt;
+&lt;p&gt;在开发的过程，由于缺少相关的技能，不得不频繁地google，导致了很多的麻烦。所以熟练相关技能相当，所谓工欲善其事必先利器。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;web基本概念理解&lt;ul&gt;
+&lt;li&gt;cookie,&amp;nbsp;session&lt;/li&gt;
+&lt;li&gt;应答，跳转&lt;/li&gt;
+&lt;li&gt;服务器端，客户端&lt;/li&gt;
+&lt;li&gt;ajax&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一种开发工具/框架&lt;ul&gt;
+&lt;li&gt;django/RoR等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;界面设计：&lt;ul&gt;
+&lt;li&gt;html&lt;/li&gt;
+&lt;li&gt;css&lt;/li&gt;
+&lt;li&gt;交互设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;客户端脚本：&lt;ul&gt;
+&lt;li&gt;javascript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其中界面设计我觉得是最重要的，也是我最欠缺的。因为不管什么网站，都是由一个个页面组成，最终用户看到的只是界面。对于开发人员都说，好的界面也能提高开发人员的成就感，更重要的是界面指导着我们怎么去设计。&lt;/p&gt;
+&lt;p&gt;以前只是听说过交互设计，现在真正体会交互设计的困难。我理解的交互如下：&amp;nbsp;基本上分为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;取得数据&lt;/li&gt;
+&lt;li&gt;如何取得（request/ajax）&lt;/li&gt;
+&lt;li&gt;如何展现（界面设计）&lt;/li&gt;
+&lt;li&gt;进一步操作（编辑，删除，详细等）&lt;/li&gt;
+&lt;li&gt;提交数据&lt;/li&gt;
+&lt;li&gt;表单设计&lt;/li&gt;
+&lt;li&gt;校验&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;交互其实挺麻烦的，有时候明明知道一个功能，但是就是不知道该怎么展现这个功能，分几个步骤？提供哪些操作？&lt;/p&gt;
+&lt;p&gt;好多东西要学，功夫还得下在平时。&lt;/p&gt;
+&lt;h2 id=&#34;_3&#34;&gt;性能&lt;/h2&gt;
+&lt;p&gt;对性能还没有怎么仔细考虑过，但是也有一些体会：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;网站的性能瓶颈很多时候在于数据库，但是数据库的性能往往取决于代码。&lt;ul&gt;
+&lt;li&gt;合理设计数据表&lt;/li&gt;
+&lt;li&gt;批量操作&lt;/li&gt;
+&lt;li&gt;不要重复查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;压缩文档&lt;ul&gt;
+&lt;li&gt;去掉不要属性，空格，减少各种文档(html,css,js,图片等)的大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;cache&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;_4&#34;&gt;工作流程进化&lt;/h2&gt;
+&lt;p&gt;整个项目代码是由git管理的。&lt;/p&gt;
+&lt;p&gt;最开始：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;开发&lt;/li&gt;
+&lt;li&gt;本机测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这时只有一个git仓库&lt;/p&gt;
+&lt;p&gt;上线之后，git仓库如下：&lt;br /&gt;
+&lt;div class=&#34;codebox&#34;&gt;&lt;figure class=&#34;code&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;../-&amp;gt;github&lt;br /&gt;dev-&amp;gt;mid-&amp;gt;online&lt;br /&gt;            |&lt;br /&gt;local&amp;lt;------/&lt;br /&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br /&gt;&lt;figcaption&gt;Text only&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;dev为开发代码，github用来保存代码，mid与online在一个服务器上，用来作为中介，local是本地的online。流程如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;本地开发&lt;/li&gt;
+&lt;li&gt;本地测试&lt;/li&gt;
+&lt;li&gt;push到github&lt;/li&gt;
+&lt;li&gt;push到mid&lt;/li&gt;
+&lt;li&gt;online pull&amp;nbsp;mid&lt;/li&gt;
+&lt;li&gt;local pull&amp;nbsp;online&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;项目的开发，不仅仅是利用开发工具进行功能的开发，我们还需要一套合理的开发流程，好的开发流程可以很好的提升效率，也有得于后期的维护。所以我们需要利用任何工具（git，shell脚本）来支持这个流程，以及帮助开发。&lt;/p&gt;
+&lt;h2 id=&#34;_5&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;很浅显的一些理解和经验，记录在此，以改进以后的开发工作。&lt;/p&gt;                        </content>
         </entry>
             <entry>
             <title type="html">使用hyde+github pages搭建静态站点</title>
@@ -58,7 +168,100 @@
                         label="Github" />
             
             <content type="html">
-                                            </content>
+                                            &lt;p&gt;这篇文章记录了我用hyde和github&amp;nbsp;pages搭建这个博客的过程。里面包括起因，过程，还有一些有用的资料。&lt;/p&gt;
+&lt;h2 id=&#34;&#34;&gt;起因&lt;/h2&gt;
+&lt;p&gt;无意中发现有github pages这个玩意儿，然后搜索到&lt;a href=&#34;http://beiyuu.com&#34;&gt;BeiYuu.com&lt;/a&gt;的博客，第一眼就被他博客的简洁风格震撼到了。仔细看了他的文章，感觉发现一片新的天空，感觉特别激动。&lt;/p&gt;
+&lt;p&gt;现在是在用&lt;a href=&#34;http://www.is-programmer.com&#34;&gt;is-programmer&lt;/a&gt;的博客，也用wordpress搭建过博客，本来还想着自己什么时候用django再实现一个，但我还是被静态站点这种方式吸引住了，看来现在就是大干一场的时候了。吸引我的几个地方如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内容全静态，部署简单（github&amp;nbsp;pages）&lt;/li&gt;
+&lt;li&gt;借助Jekyll和hyde等工具，可以方便的设计复杂结构的站点&lt;/li&gt;
+&lt;li&gt;利用git来管理，方便网站设计和发布&lt;/li&gt;
+&lt;li&gt;内容编辑更自由，直接写html或者用markdown等各种方式生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总结一下就是：&lt;strong&gt;自由&lt;/strong&gt;，&lt;strong&gt;完全掌控&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;hydejekyll&#34;&gt;Hyde还是Jekyll？&lt;/h2&gt;
+&lt;p&gt;网上大部分的教程都是说的使用Jekyll，我本来也想用Jekyll做的，但是得知Jekyll是ruby写的之后我犹豫了，因为我更偏向于python。在网上搜索一翻后，很快我发现了Hyde。Hyde完全是Jekyll的python版的孪生兄弟。&amp;nbsp;我自己并没有用过Jekyll，网上有一些针对它们的比较，下面是不由两篇我觉得比较有用的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.distractable.net/tech/static-site-generators-jekyll-vs-hyde&#34;&gt;Jekyll-vs-hyde-1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://philipm.at/2011/0507/&#34;&gt;jekyll-vs-hyde-2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总结一下，&amp;nbsp;Jekyll的优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;容易上手，有很多现成的模板&lt;/li&gt;
+&lt;li&gt;github&amp;nbsp;page后台支持&lt;/li&gt;
+&lt;li&gt;有octopress等基于Jekyll的框架使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hyde的优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;content，layout，deploy分离，站点结构更清晰&lt;/li&gt;
+&lt;li&gt;强大的django模板系统(jinja2等)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hyde&#34;&gt;我的选择：Hyde&lt;/h2&gt;
+&lt;p&gt;在仔细的比较之后，我发现Jekyll和hyde在能力上是不相上下的，但hyde有更让我喜欢的理由：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hyde是基于python的&lt;/li&gt;
+&lt;li&gt;hyde更像Django&lt;/li&gt;
+&lt;li&gt;我喜欢python和Django&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;选择了hyde就得了解和学习它，下面是Hyde相关的资料：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ringce.com/blog/2009/introducing_hyde&#34;&gt;Hyde的诞生&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ringce.com/hyde&#34;&gt;hyde&lt;/a&gt;：原始hyde主页&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lakshmivyas/hyde&#34;&gt;lakshmivyas/hyde github&lt;/a&gt;：原始hyde，已停止开发&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hyde/hyde&#34;&gt;new Hyde github&lt;/a&gt;：新版hyde，活跃状态&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hyde/hyde/wiki/Hyde-Powered&#34;&gt;Hyde Powered的站点&lt;/a&gt;：全是基于hyde的网站&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hyde.github.com/&#34;&gt;Hyde文档&lt;/a&gt;：正在建设中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;_1&#34;&gt;开始设计站点&lt;/h2&gt;
+&lt;p&gt;基本的域名，github配置，Jekyll生成站点等请参考BeiYuu的博文&lt;a href=&#34;http://beiyuu.com/github-pages/&#34;&gt;使用Github Pages建独立博客&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;hyde_1&#34;&gt;Hyde安装，基本使用&lt;/h3&gt;
+&lt;p&gt;参考下面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hyde/hyde&#34;&gt;hyde github&amp;nbsp;&lt;span class=&#34;caps&#34;&gt;README&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hyde.github.com/&#34;&gt;hyde&amp;nbsp;overview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按照这个过程走下来，会得到一个简易的，但真的设计比较全面的站点。
+结构如下：
+&lt;div class=&#34;codebox&#34;&gt;&lt;figure class=&#34;code&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;- content&lt;br /&gt;    - media&lt;br /&gt;        - css&lt;br /&gt;        - js&lt;br /&gt;        - images&lt;br /&gt;    about.html&lt;br /&gt;    index.html&lt;br /&gt;    - blog&lt;br /&gt;    - projects&lt;br /&gt;    - portfolio&lt;br /&gt;- layout&lt;br /&gt;    base.j2&lt;br /&gt;    macros.j2&lt;br /&gt;site.yaml&lt;br /&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br /&gt;&lt;figcaption&gt;Bash&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h4 id=&#34;_2&#34;&gt;文件说明&lt;/h4&gt;
+&lt;p&gt;site.yaml：整个站点的配置文件&lt;/p&gt;
+&lt;p&gt;layout/:&amp;nbsp;站点布局文件夹，里面基本是一些模板文件&lt;/p&gt;
+&lt;p&gt;content/:&amp;nbsp;站点内容放在这，包括post，media/(css,js,images)等&lt;/p&gt;
+&lt;p&gt;通过修改配置和布局就可以设计成自己想要的样子了。&lt;/p&gt;
+&lt;p&gt;由于站点是全部静态的，所以基本的东西设计好之后，必须利用外部js来实现动态的内容。其实这也是我很喜欢的一种方式：网站利用api或某种方式提供服务，其它用户利用脚本把需要的功能集成起来实现自己的需求。比如：disqus提供评论，gist提供代码显示，dropbox来放图片等&lt;/p&gt;
+&lt;h3 id=&#34;_3&#34;&gt;评论&lt;/h3&gt;
+&lt;p&gt;参见&lt;a href=&#34;http://docs.disqus.com/developers/universal/&#34;&gt;disqus帮助&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;_4&#34;&gt;代码高亮&lt;/h3&gt;
+&lt;p&gt;我想到的基本有三种方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;截图，利用图片显示代码&lt;/li&gt;
+&lt;li&gt;pygments&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/&#34;&gt;github:gist&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;第一种方式，因为不能复制这个缺点，应该很少用到，呵呵。下面说说后两种方式：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pygments&lt;/strong&gt;：&lt;br /&gt;
+首先要安装pygments，这个在安装hyde的时候应该已经装上了。&lt;br /&gt;&amp;nbsp;然后得生成需要的css文件，使用像下面这样的命令：&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;&lt;figure class=&#34;code&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pygmentize -f html -S native -a .highlight &amp;gt; syntax.css&lt;br /&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br /&gt;&lt;figcaption&gt;Bash&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;具体的命令可以pygmentize -h查看。或者查看&lt;a href=&#34;https://github.com/lakshmivyas/hyde&#34;&gt;Hyde &lt;span class=&#34;caps&#34;&gt;README&lt;/span&gt;&lt;/a&gt;页面和&lt;a href=&#34;http://pygments.org/docs/&#34;&gt;pygments文档&lt;/a&gt;的介绍。&lt;br /&gt;&amp;nbsp;pygments要配合hyde的syntext插件使用，syntext插件提供一个syntax标签，在文档中我们像下面这样使用：&lt;/p&gt;
+&lt;div class=&#34;codebox&#34;&gt;&lt;figure class=&#34;code&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;cp&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;syntax&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;bash&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;%}&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;br /&gt;&lt;span class=&#34;x&#34;&gt;pygmentize -f html -S native -a .highlight &amp;gt; syntax.css&lt;/span&gt;&lt;br /&gt;&lt;span class=&#34;cp&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;endsyntax&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;%}&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;br /&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br /&gt;&lt;figcaption&gt;Django/Jinja&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;
+
+&lt;p&gt;syntax标签可以格式化它之间的代码，配合自定义css和生成的syntax.css，就实现语法高亮了。&lt;br /&gt;&amp;nbsp;具体的完全可以参考hyde最开始生成的那个站点的site.yaml设置和css文件设置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gist&lt;/strong&gt;:&lt;br /&gt;&amp;nbsp;pygments我觉得主要用在一些临时性的代码片断上，如果是一些有一定意义，需要演示的代码，最好还是嵌入gist来显示，这也体现了功能分离的原则，因为毕竟文档不是放代码最好的地方。&lt;/p&gt;
+&lt;h3 id=&#34;feed&#34;&gt;feed&lt;/h3&gt;
+&lt;p&gt;这个是可以通过模板自动生成的。hyde自动生成的站点中atom.js/atom.xml是很好的例子。&lt;br /&gt;
+然后利用&lt;a href=&#34;http://www.feedsky.com/&#34;&gt;feedsky&lt;/a&gt;等站点绑定你的atom.xml来提供feed即可。&lt;/p&gt;
+&lt;h3 id=&#34;_5&#34;&gt;其它&lt;/h3&gt;
+&lt;p&gt;archive，tag，分页等，hyde都提供了很好的支持。由于hyde的文档比较少，所以瑞在最好的学习方式就是参考其它人的网站源代码&lt;a href=&#34;https://github.com/hyde/hyde/wiki/Hyde-Powered&#34;&gt;hyde powered&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;_6&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;折腾了几天，终于成形了，很开心。不过真心不喜欢折腾的感觉啊。&lt;/p&gt;
+&lt;p&gt;由于对网站布局，css等实在不是很懂，很多都是参考其它网站的，这里要特别感谢:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://beiyuu.com/&#34;&gt;BeiYuu.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stevelosh.com&#34;&gt;stevelosh.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jseabold.net&#34;&gt;jsebold.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本站点（&lt;a href=&#34;https://github.com/webee/webee.github.com&#34;&gt;github&lt;/a&gt;）是参考它们+自己折腾的结果。&lt;/p&gt;                        </content>
         </entry>
             <entry>
             <title type="html">第一篇</title>
@@ -78,6 +281,6 @@
                         label="Github" />
             
             <content type="html">
-                                            </content>
+                                            &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;历时两天，终于折腾出来了一个看起来可以用的博客了。还有很多需要改进的地方，慢慢来吧。&lt;/p&gt;                        </content>
         </entry>
     </feed>
