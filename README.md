@@ -15,9 +15,10 @@ my blog based on github pages, powered by hyde.
 
 * 分页
 * 评论
-* tag
+* tag,tag-archive,tag-cloud
 
 TODO:
 
-* tag cloud
-* archive
+* site-map
+* blog
+* just blog.
