@@ -141,30 +141,6 @@ hr {
   height: 1px;
   margin-bottom: 24px;
 }
-.splash {
-  color: #454545;
-  text-align: center;
-  font: normal 27px/32px "微软雅黑", "Times New Roman", Times, serif;
-  margin-bottom: -1px;
-  padding-top: 0;
-}
-.splash p {
-  margin-bottom: 10px;
-}
-.splash .amp {
-  font-style: italic;
-}
-.splash .fn {
-  color: #454545;
-  text-decoration: none;
-}
-.splash .fn:hover {
-  color: #e50053;
-  text-decoration: none;
-}
-.splash .fn .last-name {
-  display: none;
-}
 .section-listing {
   margin-bottom: -50px;
 }
@@ -219,6 +195,42 @@ hr {
 .section-listing ol div.more li a:hover {
   color: #e50053;
   text-decoration: underline;
+}
+.section-tag-archives {
+  margin-bottom: 50px;
+}
+.section-tag-archives ul li {
+  margin: 20px;
+  font-family: "微软雅黑", "Times New Roman", Times, serif;
+}
+.section-tag-archives ul li a {
+  font: normal 23px/32px;
+  display: block;
+}
+.section-tag-archives ul li a:hover {
+  color: #e50053;
+}
+.section-tag-archives ul li span.snip {
+  font-size: 14px;
+  color: #777;
+  line-height: 25px;
+  font-style: italic;
+}
+.section-tag-archives ul li span.date {
+  display: block;
+  font-size: 11px;
+  color: #aaa;
+  line-height: 25px;
+}
+.section-tags {
+  line-height: 250%;
+}
+.section-tags a.tagcloud {
+  color: #777;
+}
+.section-tags a.tagcloud:hover {
+  color: #e50053;
+  text-decoration: none;
 }
 blockquote {
   overflow: auto;
