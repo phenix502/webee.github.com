@@ -33,10 +33,6 @@ context:
                 type: node
                 url: blog
             -
-                name: note
-                type: node
-                url: note
-            -
                 name: About
                 type: page
                 url: about.html
@@ -67,13 +63,6 @@ tagger:
         blog:
             source: blog
             target: blog/tags
-            template: tagged_posts.j2
-            archive_extension: html
-            meta:
-                listable: false
-        note:
-            source: note
-            target: note/tags
             template: tagged_posts.j2
             archive_extension: html
             meta:
