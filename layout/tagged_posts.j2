@@ -1,28 +1,20 @@
 {% extends "base.j2" %}
 
 {% block main %}
-<section class="archives">
-<h1 class="tag title">{{ tag.name }}</h1>
+<div class="section-tag-archives">
+<h2 class="tag title">标签为"{{ tag.name }}"的文章</h2>
 <ul class="posts clear">
-{% for resource in walker() -%}
-<li class="post clear">
-    <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
-        {{ resource.meta.created.strftime('%a, %d %b %Y') }}
-    </time>
-    <a href="{{ content_url(resource.url) }}">{{ resource.meta.title }}</a>
-    {% if resource.meta.tags %}
-    <ul class="tags">
-    {% for tag in resource.meta.tags %}
-    <li>
-        <a class="small" href="{{ content_url('blog/tags/'~tag~'.html') }}">
-            {{ tag }}
-        </a>
+    {% for res in walker() -%}
+    <li class="post clear">
+        <a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a>
+        <span class="snip">{{ res.meta.description }}</span>
+        <div>
+            <span class="date right">
+                {{res.meta.author}}:{{ res.meta.created.strftime('%Y-%m-%d %H:%M:%S') }}
+            </span>
+        </div>
     </li>
-    {% endfor %}
-    </ul>
-    {% endif %}
-</li>
-{%- endfor %}
+    {%- endfor %}
 </ul>
-</section>
+</div>
 {% endblock %}

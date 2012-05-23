@@ -208,6 +208,37 @@ hr {
         }
     }
 }
+.section-tag-archives {
+    margin-bottom: 50px;
+    ul {
+        li {
+            margin: 20px;
+            font-family: @font-fancy;
+
+            a {
+                font: normal 23px/32px;    // 3
+                display: block;
+
+                &:hover {
+                    color: @c-link;
+                }
+            }
+
+            span.snip {
+                font-size: 14px;     // 1
+                color: #777;
+                line-height: 25px;
+                font-style: italic;
+            }
+            span.date {
+                display: block;
+                font-size: 11px;
+                color: #aaa;
+                line-height: 25px;
+            }
+        }
+    }
+}
 
 blockquote {
     overflow: auto;
