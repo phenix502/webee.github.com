@@ -8,7 +8,7 @@
     {% for tagname, tag in site.tagger.tags -%}
     {# font-size: 12px-48px #}
     {% set count = tag.resources|length %}
-    <a style="font-size:{{12 + (count/N)*36}}px" rel="tag" title="{{count}}个主题" href="{{ content_url('blog/tags/'~tag) }}">
+    <a class="tagcloud" style="font-size:{{12 + (count/N)*36}}px" rel="tag" title="{{count}}个主题" href="{{ content_url('blog/tags/'~tag) }}">
         {{ tagname }}
     </a>
     {% endfor %}

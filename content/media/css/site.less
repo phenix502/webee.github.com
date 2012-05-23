@@ -115,33 +115,6 @@ hr {
     height: 1px;
     margin-bottom: 24px;
 }
-.splash {
-    @color: #454545;
-    color: @color;
-    text-align: center;
-    font: normal 27px/32px @font-fancy;
-    margin-bottom: -1px;
-    padding-top: 0;
-
-    p {
-        margin-bottom: 10px;
-    }
-    .amp {
-        font-style: italic;
-    }
-    .fn {
-        color: @color;
-        text-decoration: none;
-
-        &:hover {
-            color: @c-link;
-            text-decoration: none;
-        }
-        .last-name {
-            display: none;
-        }
-    }
-}
 .section-listing {
     margin-bottom: -50px;
     ol {
@@ -236,6 +209,16 @@ hr {
                 color: #aaa;
                 line-height: 25px;
             }
+        }
+    }
+}
+.section-tags {
+    line-height:250%;
+    a.tagcloud {
+        color: #777;
+        &:hover {
+            color: @c-link;
+            text-decoration: none;
         }
     }
 }
