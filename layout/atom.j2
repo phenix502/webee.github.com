@@ -5,14 +5,15 @@
         {% block title %}{{ resource.meta.title|default(feed_title) }}{% endblock %}
     </title>
     {% block self_url %}
-    <link href="{{ resource.url }}" rel="self" />
+    <link href="{{ site.meta.host }}{{ content_url(resource.url) }}" rel="self" type="application/rss+xml"/>
     {% endblock %}
 
     {% block site_url %}
-    <link href="/"/>
+    <link href="{{ site.meta.host }}"/>
     {% endblock %}
 
     {% block feed_extra %}
+    <description>find your way.</description>
     {% endblock %}
 
     <updated>{{ time_now|xmldatetime }}</updated>

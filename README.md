@@ -26,6 +26,7 @@ tools/src/connect.c: 代理转换
 
 TODO:
 
+* 修改feed格式
 * site-map
 * blog
 * just blog.
