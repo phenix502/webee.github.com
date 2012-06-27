@@ -2,12 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>
         BabYiShan.com    </title>
-        <link href="blog/atom.xml" rel="self" />
+        <link href="http://babyishan.com/blog/atom.xml" rel="self" type="application/rss+xml"/>
     
-        <link href="/"/>
+        <link href="http://babyishan.com"/>
     
-        
-    <updated>2012-06-27T17:23:54Z</updated>
+        <description>find your way.</description>
+    
+    <updated>2012-06-27T18:13:55Z</updated>
 
     <id>/blog/atom.xml/</id>
 

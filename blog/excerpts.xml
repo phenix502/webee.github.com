@@ -2,12 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>
         excerpts feed    </title>
-        <link href="blog/excerpts.xml" rel="self" />
+        <link href="http://babyishan.com/blog/excerpts.xml" rel="self" type="application/rss+xml"/>
     
-        <link href="/"/>
+        <link href="http://babyishan.com"/>
     
-        
-    <updated>2012-06-27T17:23:55Z</updated>
+        <description>find your way.</description>
+    
+    <updated>2012-06-27T18:13:57Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
