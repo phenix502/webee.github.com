@@ -7,10 +7,34 @@
         <link href="/"/>
     
         
-    <updated>2012-06-27T12:01:54Z</updated>
+    <updated>2012-06-27T17:23:55Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">让git使用代理</title>
+            <author><name>webee.yw</name></author>
+            <link href="http://babyishan.com/blog/2012/06/git_via_proxy"/>
+            <updated>2012-06-27T16:20:00Z</updated>
+            <published>2012-06-27T16:20:00Z</published>
+            <id>/blog/2012/06/git_via_proxy</id>
+                        <category   scheme="/blog/tags"
+                        term="git"
+                        label="Git" />
+                        <category   scheme="/blog/tags"
+                        term="github"
+                        label="Github" />
+                        <category   scheme="/blog/tags"
+                        term="proxy"
+                        label="Proxy" />
+                        <category   scheme="/blog/tags"
+                        term="ssh"
+                        label="Ssh" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">转自小呆的回忆</title>
             <author><name>webee.yw</name></author>
