@@ -18,7 +18,7 @@
 
     <updated>{{ time_now|xmldatetime }}</updated>
 
-    <id>{{ content_url(resource.url) }}/</id>
+    <id>{{site.meta.host}}{{ content_url(resource.url) }}</id>
 
     {% for res in resource.node.walk_resources_sorted_by_time() %}
         <entry>
