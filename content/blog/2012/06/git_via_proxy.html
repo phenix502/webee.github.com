@@ -1,0 +1,53 @@
+---
+title: 让git使用代理
+description: >
+    当无法正常连接github，pull/push代码时，可以考虑通过代理使用git。
+created: !!timestamp '2012-06-27 16:20:00'
+tags:
+    - git
+    - github
+    - proxy
+    - ssh
+---
+无奈在教育网使用github，push时老是Connection time out。找了一种让git使用代理的方法，解决了这个问题。方法如下：
+
+**1.下载：[connect.c](http://babyishan.com/tools/src/connect.c)**
+
+**2.编译：gcc -o connect connect.c**
+
+**3.相关脚本**
+
+1.socks-gw
+
+{% syntax bash %}
+#!/bin/sh
+# This script connects to a SOCKS proxy using connect.c
+<path-to-connect>/connect -S <socks-proxy-url>:<port-number> $@
+{% endsyntax %}
+
+-S指定socks代理，-H指定http代理。
+
+2.socks-ssh
+
+{% syntax bash %}
+#!/bin/sh
+# This script opens an SSH connection through a SOCKS server
+ssh -o ProxyCommand="<path-to-socks-gw>/socks-gw %h %p" $@
+{% endsyntax %}
+
+让ssh使用代理连接。比如:
+
+{% syntax bash %}
+ssh -T -o ProxyCommand="<path-to-socks-gw>/socks-gw %h %p" git@github.com
+{% endsyntax %}
+
+**4. chmod +x 以上两个文件**
+
+**5. 用下面两句设置环境变量：**
+
+{% syntax bash %}
+export GIT_SSH="<path-to-socks-ssh>/socks-ssh"
+export GIT_PROXY_COMMAND="<path-to-socks-gw>/socks/socks-gw"
+{% endsyntax %}
+
+好了，这样git就可以使用指定的代理了。
