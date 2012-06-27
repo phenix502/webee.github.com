@@ -7,7 +7,7 @@ my blog based on github pages, powered by hyde.
 
 * blog: 博客文章
 * project: 项目信息
-* note: 心得笔记
+* tags: 标签云
 * about: 关于我
 * feed: rss订阅
 
