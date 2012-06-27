@@ -7,10 +7,28 @@
         <link href="/"/>
     
         
-    <updated>2012-05-23T13:57:16Z</updated>
+    <updated>2012-06-27T12:01:54Z</updated>
 
     <id>/blog/excerpts.xml/</id>
 
+            <entry>
+            <title type="html">转自小呆的回忆</title>
+            <author><name>webee.yw</name></author>
+            <link href="http://babyishan.com/blog/2012/06/from_xiaodai_memory"/>
+            <updated>2012-06-26T13:20:00Z</updated>
+            <published>2012-06-26T13:20:00Z</published>
+            <id>/blog/2012/06/from_xiaodai_memory</id>
+                        <category   scheme="/blog/tags"
+                        term="babyishan"
+                        label="Babyishan" />
+                        <category   scheme="/blog/tags"
+                        term="love"
+                        label="Love" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
             <entry>
             <title type="html">初接触网站开发之理解与心得</title>
             <author><name>webee.yw</name></author>
