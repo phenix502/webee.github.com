@@ -9,4 +9,3 @@ deploy/*
 *.o
 *.bin
 content/blog/tags/*
-content/note/tags/*
