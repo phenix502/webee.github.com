@@ -8,7 +8,7 @@
     
         <description>find your way.</description>
     
-    <updated>2012-06-27T18:25:29Z</updated>
+    <updated>2012-07-30T02:03:38Z</updated>
 
     <id>http://babyishan.com/blog/excerpts.xml</id>
 
@@ -49,6 +49,27 @@
                         <category   scheme="/blog/tags"
                         term="love"
                         label="Love" />
+            
+            <content type="html">
+                
+                            </content>
+        </entry>
+            <entry>
+            <title type="html">水墨丹青凤凰城</title>
+            <author><name>webee.yw</name></author>
+            <link href="http://babyishan.com/blog/2012/06/tour_to_fenghuang"/>
+            <updated>2012-06-10T15:20:00Z</updated>
+            <published>2012-06-10T15:20:00Z</published>
+            <id>/blog/2012/06/tour_to_fenghuang</id>
+                        <category   scheme="/blog/tags"
+                        term="babyishan"
+                        label="Babyishan" />
+                        <category   scheme="/blog/tags"
+                        term="love"
+                        label="Love" />
+                        <category   scheme="/blog/tags"
+                        term="travel"
+                        label="Travel" />
             
             <content type="html">
                 
