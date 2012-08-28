@@ -161,12 +161,15 @@
         position: fixed;
         top: 0;
         left-margin: 5px;
-        right: -100px;
+        right: -132px;
         color: #ddd;
       }
       #listtools a {
         color: white;
         text-decoration: none;
+      }
+      #listtools a.home {
+        color: #e50053;
       }
       
       tr.hidden {
@@ -442,6 +445,7 @@
         <p style="padding-left: 15px">
         Add your music directory(.mp3,.m4a,.ogg,.oga)
         </p>
+        <p style="padding-left: 15px">Return <a style="color:#e50053;" href="/">Babyishan</a></p>
       </div>
     </div>
     <div id="search">
@@ -449,6 +453,7 @@
     </div>
     <div style="height: 37px"></div>
     <div id="listtools">
+      <a class="home" href="/">Babyishan</a>: 
       <a href="javascript:shuffle()">Shuffle</a> / 
       <a href="javascript:empty()">Clear</a>
       <input type="file" webkitdirectory="" directory="" multiple="" mozdirectory="" onchange="getSongs(this.files)">
