@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=GBK">
     <title>Html5 MP3 Player</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="music.png">
     <style>
       body {
         background: #444;
@@ -385,7 +385,7 @@
         $('player').src="";
         var queue = [];
         while (song=playlist[0]) {
-          alert(song.file.name);
+          //alert(song.file.name);
           queue.push(song.file);
           song.parentNode.removeChild(song);
         }
@@ -428,7 +428,7 @@
           <input type="file" webkitdirectory="" directory="" multiple="" mozdirectory="" onchange="getSongs(this.files)">
         </center>
         <p style="padding-left: 15px">
-        选择您的音乐文件夹(.mp3,.m4a,.ogg,.oga)
+        Add your music directory(.mp3,.m4a,.ogg,.oga)
         </p>
       </div>
     </div>
