@@ -205,12 +205,23 @@
       
       function runSearch(query){
         console.log(query);
-        var regex = new RegExp(query.trim().replace(/\s+/g, '.*'), 'ig');
-        for(var i = $('songtable').getElementsByTagName('tr'), l = i.length; l--;){
-          if(regex.test(i[l].innerHTML)){
-            i[l].className = 'visible'
+        //var regex = new RegExp(query.trim().replace(/\s+/g, '.*'), 'ig');
+        //alert(query);
+        query = query.toLowerCase();
+        var i = $('songtable').getElementsByTagName('tr');
+        if (query.indexOf('*')==0) {
+          query = query.slice(1);
+          i = $('playtable').getElementsByTagName('tr');
+        }
+        for(l = i.length; l--;){
+          //if(regex.test(i[l].innerHTML)){
+          if (i[l].innerHTML.toLowerCase().indexOf(query)>-1) {
+            i[l].className='visible';
           }else{
-            i[l].className = 'hidden';
+            i[l].className='hidden';
+          }
+          if (currentSong==i[l]) {
+            i[l].className+=' playing';
           }
         }
       }
@@ -290,6 +301,7 @@
               td.innerHTML = tags.Genre || "";
               tr.appendChild(td);
               tr.file = f;
+              tr.className = 'visible';
               $('songtable').appendChild(tr);
               tr.onclick = function(){
                 var pl = document.createElement('tr');
