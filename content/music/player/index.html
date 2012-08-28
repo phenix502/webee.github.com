@@ -289,6 +289,7 @@
               var t2 = guessSong(f.webkitRelativePath || f.mozFullPath || f.name); 
               //it should be innerText/contentText but its annoying.
               var td = document.createElement('td');
+              var songtd = td;
               td.innerHTML = f.name || tags.Title || t2.Title;
               tr.appendChild(td);
               
@@ -306,7 +307,7 @@
               tr.file = f;
               tr.className = 'visible';
               $('songtable').appendChild(tr);
-              tr.onclick = function(){
+              songtd.onclick = function(){
                 var pl = document.createElement('tr');
                 var st = document.createElement('td');
                 var rm = document.createElement('td');
@@ -427,8 +428,14 @@
         
         document.querySelector('#search input').onkeydown = function(e){
           if(e.keyCode == 13){
-            for(var i = document.querySelectorAll('#songtable tr.visible'), l = i.length; l--;){
-              i[l].onclick();
+            var i = document.querySelectorAll('#songtable tr.visible');
+            var first=0;
+            if (this.value[0]== '*') {
+                i = document.querySelectorAll('#playtable tr.visible');
+                first=1;
+            }
+            for(l = i.length; l--;){
+              i[l].children[first].onclick();
             }
           }
         }
@@ -449,7 +456,7 @@
       </div>
     </div>
     <div id="search">
-      <input type="text" placeholder="filter library" spellcheck="off" autocomplete="off" oninput="runSearch(this.value)">
+      <input type="text" placeholder="filter library, with prefix * to filter play list." spellcheck="off" autocomplete="off" oninput="runSearch(this.value)">
     </div>
     <div style="height: 37px"></div>
     <div id="listtools">
