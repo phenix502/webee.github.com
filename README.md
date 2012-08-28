@@ -30,3 +30,7 @@ TODO:
 * site-map
 * blog
 * just blog.
+* local player:
+    1. read files will use large memory.
+       just read a file include filepath list.
+    2. add url support.
