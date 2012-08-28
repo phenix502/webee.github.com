@@ -239,10 +239,10 @@
       var currentSong = 0;
       function nextSong(){
         try{
-          currentSong.nextSibling.onclick(); 
+          currentSong.nextSibling.firstChild.onclick(); 
         }catch(e){
           currentSong = document.querySelector("#playtable tr");
-          currentSong.onclick();
+          currentSong.firstChild.onclick();
         }
       }
       
